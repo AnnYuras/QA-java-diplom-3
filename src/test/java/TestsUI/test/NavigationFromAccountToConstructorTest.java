@@ -1,11 +1,17 @@
 package TestsUI.test;
 
-import io.qameta.allure.Description;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import java.util.Collection;
 import static org.junit.Assert.assertEquals;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+import io.qameta.allure.Description;
+
+import java.time.Duration;
+import java.util.Collection;
+import org.junit.runners.Parameterized;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 /**
  * Класс тестов для проверки перехода из личного кабинета в конструктор
@@ -13,7 +19,7 @@ import static org.junit.Assert.assertEquals;
  * Параметризированный тест, который выполняется в разных браузерах.
  */
 @RunWith(Parameterized.class)
-public class FromAccountToConstructorTest extends BaseTest {
+public class NavigationFromAccountToConstructorTest extends BaseTest {
 
     /**
      * Параметризация тестов: получение списка браузеров, в которых будут выполняться тесты.
@@ -32,7 +38,7 @@ public class FromAccountToConstructorTest extends BaseTest {
      *
      * @param browser Название браузера, в котором будет выполняться тест.
      */
-    public FromAccountToConstructorTest(String browser) {
+    public NavigationFromAccountToConstructorTest(String browser) {
         super(browser);
     }
 
@@ -43,18 +49,24 @@ public class FromAccountToConstructorTest extends BaseTest {
      * Тест для проверки перехода в конструктор из личного кабинета по нажатию кнопки "Конструктор".
      * Проверяется, что после входа в личный кабинет и клика по кнопке "Конструктор", пользователь попадает на главную страницу.
      */
+
+    /**
+     * Баг: после входа в аккаунт
+     * открывается строница логина, а не главная страница.
+     */
     @Test
     @Description("Тестирование перехода из личного кабинета в конструктор по клику на «Конструктор»")
     public void testConstructorButtonFromPersonalCabinet() {
         // Клик по кнопке личного кабинета для входа
-        loginPage.clickPersonalCabinetButton();
-        loginPage.enterEmail("testuser@example.com");
-        loginPage.enterPassword("password123");
-        loginPage.submitLogin();
+        loginPage.clickUserAccountButton();
+        loginPage.enterEmail("idjbospwhe@test.com");
+        loginPage.enterPassword("TestPassword123!");
+        loginPage.signInButton();
+
         // Проверка, что после входа на главную страницу
         assertEquals("URL после входа должен быть главной страницей", LOGIN_URL, driver.getCurrentUrl());
         // Повторный клик по кнопке личного кабинета
-        loginPage.clickPersonalCabinetButton();
+        loginPage.clickUserAccountButton();
         // Проверка, что после повторного клика URL изменился на страницу профиля
         assertEquals("URL после входа в аккаунт и повторного клика по кнопке «Личный кабинет» должен быть переход на страницу профиля", LOGIN_URL2, driver.getCurrentUrl());
         // Клик по кнопке "Конструктор"
@@ -71,18 +83,18 @@ public class FromAccountToConstructorTest extends BaseTest {
     @Description("Тестирование перехода из личного кабинета в конструктор по клику на логотип Stellar Burgers")
     public void testConstructorButtonFromStellarBurgersLogo() {
         // Клик по кнопке личного кабинета для входа
-        loginPage.clickPersonalCabinetButton();
-        loginPage.enterEmail("testuser@example.com");
-        loginPage.enterPassword("password123");
-        loginPage.submitLogin();
+        loginPage.clickUserAccountButton();
+        loginPage.enterEmail("idjbospwhe@test.com");
+        loginPage.enterPassword("TestPassword123!");
+        loginPage.signInButton();
         // Проверка, что после входа на главную страницу
         assertEquals("URL после входа должен быть главной страницей", LOGIN_URL, driver.getCurrentUrl());
         // Повторный клик по кнопке личного кабинета
-        loginPage.clickPersonalCabinetButton();
+        loginPage.clickUserAccountButton();
         // Проверка, что после повторного клика URL изменился на страницу профиля
         assertEquals("URL после входа в аккаунт и повторного клика по кнопке «Личный кабинет» должен быть переход на страницу профиля", LOGIN_URL2, driver.getCurrentUrl());
         // Клик по логотипу "Stellar Burgers"
-        loginPage.clickStellarBurgersLogo();
+        loginPage.clickStellarLogo();
         // Проверка, что после клика по логотипу URL остается главной страницей
         assertEquals("URL после клика по логотипу Stellar Burgers должен быть главной страницей", LOGIN_URL, driver.getCurrentUrl());
     }
