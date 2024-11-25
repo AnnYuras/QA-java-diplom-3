@@ -1,0 +1,68 @@
+-------------------------------------------------------------------------------
+Test set: praktikum.BurgerTest
+-------------------------------------------------------------------------------
+Tests run: 32, Failures: 16, Errors: 0, Skipped: 0, Time elapsed: 0.872 s <<< FAILURE! - in praktikum.BurgerTest
+testAddMultipleIngredients[0](praktikum.BurgerTest)  Time elapsed: 0.79 s  <<< FAILURE!
+java.lang.AssertionError: expected:<500.0> but was:<600.0>
+	at praktikum.BurgerTest.testAddMultipleIngredients(BurgerTest.java:134)
+
+testGetPrice[0](praktikum.BurgerTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: expected:<300.0> but was:<400.0>
+	at praktikum.BurgerTest.testGetPrice(BurgerTest.java:92)
+
+testGetPriceWithMultipleIngredients[0](praktikum.BurgerTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: expected:<500.0> but was:<600.0>
+	at praktikum.BurgerTest.testGetPriceWithMultipleIngredients(BurgerTest.java:144)
+
+testGetReceipt[0](praktikum.BurgerTest)  Time elapsed: 0.063 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<...=whitebun====)Price:[250,]0> but was:<...=whitebun====)Price:[450,00000]0>
+	at praktikum.BurgerTest.testGetReceipt(BurgerTest.java:124)
+
+testAddMultipleIngredients[1](praktikum.BurgerTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: expected:<500.0> but was:<600.0>
+	at praktikum.BurgerTest.testAddMultipleIngredients(BurgerTest.java:134)
+
+testGetPrice[1](praktikum.BurgerTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected:<300.0> but was:<400.0>
+	at praktikum.BurgerTest.testGetPrice(BurgerTest.java:92)
+
+testGetPriceWithMultipleIngredients[1](praktikum.BurgerTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected:<500.0> but was:<600.0>
+	at praktikum.BurgerTest.testGetPriceWithMultipleIngredients(BurgerTest.java:144)
+
+testGetReceipt[1](praktikum.BurgerTest)  Time elapsed: 0.003 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<...=whitebun====)Price:[270,]0> but was:<...=whitebun====)Price:[470,00000]0>
+	at praktikum.BurgerTest.testGetReceipt(BurgerTest.java:124)
+
+testAddMultipleIngredients[2](praktikum.BurgerTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected:<500.0> but was:<600.0>
+	at praktikum.BurgerTest.testAddMultipleIngredients(BurgerTest.java:134)
+
+testGetPrice[2](praktikum.BurgerTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: expected:<300.0> but was:<400.0>
+	at praktikum.BurgerTest.testGetPrice(BurgerTest.java:92)
+
+testGetPriceWithMultipleIngredients[2](praktikum.BurgerTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: expected:<500.0> but was:<600.0>
+	at praktikum.BurgerTest.testGetPriceWithMultipleIngredients(BurgerTest.java:144)
+
+testGetReceipt[2](praktikum.BurgerTest)  Time elapsed: 0.004 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<...=whitebun====)Price:[250,]0> but was:<...=whitebun====)Price:[450,00000]0>
+	at praktikum.BurgerTest.testGetReceipt(BurgerTest.java:124)
+
+testAddMultipleIngredients[3](praktikum.BurgerTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected:<500.0> but was:<600.0>
+	at praktikum.BurgerTest.testAddMultipleIngredients(BurgerTest.java:134)
+
+testGetPrice[3](praktikum.BurgerTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected:<300.0> but was:<400.0>
+	at praktikum.BurgerTest.testGetPrice(BurgerTest.java:92)
+
+testGetPriceWithMultipleIngredients[3](praktikum.BurgerTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: expected:<500.0> but was:<600.0>
+	at praktikum.BurgerTest.testGetPriceWithMultipleIngredients(BurgerTest.java:144)
+
+testGetReceipt[3](praktikum.BurgerTest)  Time elapsed: 0.002 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<...=whitebun====)Price:[250,]0> but was:<...=whitebun====)Price:[450,00000]0>
+	at praktikum.BurgerTest.testGetReceipt(BurgerTest.java:124)
+

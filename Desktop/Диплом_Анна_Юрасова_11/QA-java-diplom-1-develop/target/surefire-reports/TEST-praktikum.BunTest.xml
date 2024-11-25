@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="praktikum.BunTest" time="0.022" tests="120" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="gopherProxySet" value="false"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/annaurasova/Desktop/Diplom/QA-java-diplom-1/target/test-classes:/Users/annaurasova/Desktop/Diplom/QA-java-diplom-1/target/classes:/Users/annaurasova/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/annaurasova/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/annaurasova/.m2/repository/org/mockito/mockito-core/3.12.4/mockito-core-3.12.4.jar:/Users/annaurasova/.m2/repository/net/bytebuddy/byte-buddy/1.11.13/byte-buddy-1.11.13.jar:/Users/annaurasova/.m2/repository/net/bytebuddy/byte-buddy-agent/1.11.13/byte-buddy-agent-1.11.13.jar:/Users/annaurasova/.m2/repository/org/objenesis/objenesis/3.2/objenesis-3.2.jar:"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="BY"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/annaurasova/Desktop/Diplom/QA-java-diplom-1/target/surefire/surefirebooter3712296647091652858.jar /Users/annaurasova/Desktop/Diplom/QA-java-diplom-1/target/surefire 2024-11-16T18-12-32_864-jvmRun1 surefire10410645613007202349tmp surefire_08837638112105157238tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/annaurasova/Desktop/Diplom/QA-java-diplom-1/target/test-classes:/Users/annaurasova/Desktop/Diplom/QA-java-diplom-1/target/classes:/Users/annaurasova/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/annaurasova/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/annaurasova/.m2/repository/org/mockito/mockito-core/3.12.4/mockito-core-3.12.4.jar:/Users/annaurasova/.m2/repository/net/bytebuddy/byte-buddy/1.11.13/byte-buddy-1.11.13.jar:/Users/annaurasova/.m2/repository/net/bytebuddy/byte-buddy-agent/1.11.13/byte-buddy-agent-1.11.13.jar:/Users/annaurasova/.m2/repository/org/objenesis/objenesis/3.2/objenesis-3.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/annaurasova"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-07-16"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/annaurasova/Desktop/Diplom/QA-java-diplom-1"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/Users/annaurasova/Desktop/Diplom/QA-java-diplom-1/target/surefire/surefirebooter3712296647091652858.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="11.0.24+8-LTS"/>
+    <property name="user.name" value="annaurasova"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="13.6.3"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Corretto-11.0.24.8.1"/>
+    <property name="localRepository" value="/Users/annaurasova/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-11/issues/"/>
+    <property name="java.io.tmpdir" value="/var/folders/3k/gwksh9ss2r549tr92ghvmr1r0000gn/T/"/>
+    <property name="java.version" value="11.0.24"/>
+    <property name="user.dir" value="/Users/annaurasova/Desktop/Diplom/QA-java-diplom-1"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/Users/annaurasova/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.version" value="11.0.24+8-LTS"/>
+    <property name="java.specification.maintenance.version" value="2"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+  </properties>
+  <testcase name="testGetNameWithEmptyString[0]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPrice[0]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithZeroValue[0]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetName[0]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithLargeValue[0]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithEdgeValues[0]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithNegativeValue[0]" classname="praktikum.BunTest" time="0.002"/>
+  <testcase name="testMultipleBuns[0]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithNull[0]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testNullBun[0]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithEmptyString[1]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPrice[1]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithZeroValue[1]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetName[1]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithLargeValue[1]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithEdgeValues[1]" classname="praktikum.BunTest" time="0.009"/>
+  <testcase name="testGetPriceWithNegativeValue[1]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testMultipleBuns[1]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithNull[1]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testNullBun[1]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithEmptyString[2]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPrice[2]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithZeroValue[2]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetName[2]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithLargeValue[2]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithEdgeValues[2]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithNegativeValue[2]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testMultipleBuns[2]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithNull[2]" classname="praktikum.BunTest" time="0.001"/>
+  <testcase name="testNullBun[2]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithEmptyString[3]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPrice[3]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithZeroValue[3]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetName[3]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithLargeValue[3]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithEdgeValues[3]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithNegativeValue[3]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testMultipleBuns[3]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithNull[3]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testNullBun[3]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithEmptyString[4]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPrice[4]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithZeroValue[4]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetName[4]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithLargeValue[4]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithEdgeValues[4]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithNegativeValue[4]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testMultipleBuns[4]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithNull[4]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testNullBun[4]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithEmptyString[5]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPrice[5]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithZeroValue[5]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetName[5]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithLargeValue[5]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithEdgeValues[5]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithNegativeValue[5]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testMultipleBuns[5]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithNull[5]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testNullBun[5]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithEmptyString[6]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPrice[6]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithZeroValue[6]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetName[6]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithLargeValue[6]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithEdgeValues[6]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithNegativeValue[6]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testMultipleBuns[6]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithNull[6]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testNullBun[6]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithEmptyString[7]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPrice[7]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithZeroValue[7]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetName[7]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithLargeValue[7]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithEdgeValues[7]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithNegativeValue[7]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testMultipleBuns[7]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithNull[7]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testNullBun[7]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithEmptyString[8]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPrice[8]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithZeroValue[8]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetName[8]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithLargeValue[8]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithEdgeValues[8]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithNegativeValue[8]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testMultipleBuns[8]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithNull[8]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testNullBun[8]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithEmptyString[9]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPrice[9]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithZeroValue[9]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetName[9]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithLargeValue[9]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithEdgeValues[9]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithNegativeValue[9]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testMultipleBuns[9]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithNull[9]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testNullBun[9]" classname="praktikum.BunTest" time="0.001"/>
+  <testcase name="testGetNameWithEmptyString[10]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPrice[10]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithZeroValue[10]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetName[10]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithLargeValue[10]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithEdgeValues[10]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithNegativeValue[10]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testMultipleBuns[10]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithNull[10]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testNullBun[10]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithEmptyString[11]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPrice[11]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithZeroValue[11]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetName[11]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithLargeValue[11]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithEdgeValues[11]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetPriceWithNegativeValue[11]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testMultipleBuns[11]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testGetNameWithNull[11]" classname="praktikum.BunTest" time="0"/>
+  <testcase name="testNullBun[11]" classname="praktikum.BunTest" time="0"/>
+</testsuite>
