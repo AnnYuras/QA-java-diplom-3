@@ -1,0 +1,9 @@
+# Игнорировать все в папке target
+target/*
+
+# Но не игнорировать папку, которую вы хотите оставить
+!target/jacoco-report/
+!target/test-classes/
+!target/classes/
+# Игнорировать папку .idea (для IntelliJ IDEA)
+.idea/
