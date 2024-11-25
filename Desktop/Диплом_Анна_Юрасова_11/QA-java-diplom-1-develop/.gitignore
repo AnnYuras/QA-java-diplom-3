@@ -2,7 +2,7 @@
 target/*
 
 /target/
-
+.DS_Store
 
 # Но не игнорировать папку, которую вы хотите оставить
 !target/jacoco-report/
