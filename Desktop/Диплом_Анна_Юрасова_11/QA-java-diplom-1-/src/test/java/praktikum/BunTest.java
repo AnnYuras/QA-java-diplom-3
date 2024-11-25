@@ -12,7 +12,7 @@ import java.util.Collection;
 
 @RunWith(Parameterized.class)
 public class BunTest {
-
+     //Добавила дельту как окнстанту
     private static final float DELTA = 0.0001f; // Дельта для сравнения float
 
     private String name;
