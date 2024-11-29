@@ -25,11 +25,6 @@ public class MainPageTests {
     private MainPage mainPage;
 
 
-    @Parameterized.Parameters(name = "Тестирование на {0}")
-    public static Object[] browsers() {
-        return new Object[]{"chrome", "yandex"}; // Добавляем поддержку Яндекс браузера
-    }
-
     @Before
     @Step("Запуск браузера")
     public void startUp() {
