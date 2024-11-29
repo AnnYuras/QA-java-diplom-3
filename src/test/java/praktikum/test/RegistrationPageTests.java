@@ -8,8 +8,7 @@ import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
+
 import org.openqa.selenium.WebDriver;
 import praktikum.ServerURLs;
 
@@ -23,7 +22,6 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 
 
-@RunWith(Parameterized.class)
 @DisplayName("Регистрация нового пользователя")
 public class RegistrationPageTests {
 
@@ -34,23 +32,15 @@ public class RegistrationPageTests {
     private String password;
     private Faker faker = new Faker(); // Генератор случайных данных
 
-    private String browserName;
 
-    // Конструктор для параметризации
-    public RegistrationPageTests(String browserName) {
-        this.browserName = browserName;
-    }
 
-    // Параметры для тестирования на разных браузерах
-    @Parameterized.Parameters(name = "Тестирование на {0}")
-    public static Object[] browsers() {
-        return new Object[] {"chrome", "yandex"}; // Добавляем поддержку Яндекс браузера
-    }
+
 
     // Подготовка тестовой среды перед запуском каждого теста
     @Before
     @Step("Запуск браузера, подготовка тестовых данных")
     public void startUp() {
+        String browserName = System.getProperty("browser", "chrome");
         webDriver = WebDriverProvider.getDriver(browserName); // Получаем драйвер для выбранного браузера
         webDriver.get(ServerURLs.REGISTER_PAGE_URL);
         regPage = new RegistrationPage(webDriver);
@@ -78,7 +68,7 @@ public class RegistrationPageTests {
     @Test
     @DisplayName("Регистрация нового пользователя с валидными данными")
     public void registerNewUserIsSuccess() {
-        Allure.parameter("Браузер", browserName);
+        Allure.parameter("Браузер", System.getProperty("browser", "chrome"));
 
         regPage.setName(name);
         regPage.setEmail(email);
@@ -93,7 +83,7 @@ public class RegistrationPageTests {
     @Test
     @DisplayName("Регистрация нового пользователя с коротким паролем (4 символа)")
     public void registerNewUserIncorrectPasswordIsFailed() {
-        Allure.parameter("Браузер", browserName);
+        Allure.parameter("Браузер", System.getProperty("browser", "chrome"));
 
         regPage.setName(name);
         regPage.setEmail(email);
@@ -115,7 +105,6 @@ public class RegistrationPageTests {
         );
     }
 }
-
 
 
 

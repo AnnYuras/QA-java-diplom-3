@@ -2,3 +2,5 @@
 .idea/
 # Игнорировать папку target
 target/
+
+.DS_Store

@@ -5,10 +5,11 @@ import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import io.qameta.allure.junit4.DisplayName;
 
+import org.hamcrest.MatcherAssert;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
+
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import praktikum.ServerURLs;
@@ -19,13 +20,13 @@ import praktikum.pageobjects.ForgotPasswordPage;
 import praktikum.pageobjects.MainPage;
 import praktikum.pageobjects.RegistrationPage;
 
-import static org.hamcrest.MatcherAssert.assertThat;
+
 import static org.hamcrest.Matchers.equalTo;
 
 
 
 
-@RunWith(Parameterized.class)
+
 @DisplayName("Авторизация пользователя")
 public class LoginPageTests {
 
@@ -39,20 +40,11 @@ public class LoginPageTests {
     private String password;
     Faker faker = new Faker(); // Для генерации случайных данных
 
-    private String browserName;
-
-    public LoginPageTests(String browserName) {
-        this.browserName = browserName;
-    }
-
-    @Parameterized.Parameters(name = "Тестирование на {0}")
-    public static Object[] browsers() {
-        return new Object[]{"chrome", "yandex"}; // Параметры для тестирования на разных браузерах
-    }
 
     @Before
     @Step("Запуск браузера, подготовка тестовых данных")
     public void startUp() {
+        String browserName = System.getProperty("browser", "chrome");
         // Инициализация WebDriver
         webDriver = WebDriverProvider.getDriver(browserName);
         webDriver.get(ServerURLs.MAIN_PAGE_URL);
@@ -99,7 +91,7 @@ public class LoginPageTests {
     @Test
     @DisplayName("Вход через клик по кнопке 'Войти в аккаунт' на главной")
     public void authFromMainPageButtonIsSuccess() {
-        Allure.parameter("Браузер", browserName);
+        Allure.parameter("Браузер", System.getProperty("browser", "chrome"));
 
         // Переход к форме авторизации через главную страницу
         mainPage.clickAuthButton();
@@ -107,7 +99,7 @@ public class LoginPageTests {
         authUser();
 
         // Проверка текста на кнопке
-        assertThat(
+        MatcherAssert.assertThat(
                 "Текст на кнопке 'Войти в аккаунт' должен поменяться на 'Оформить заказ'",
                 mainPage.getAuthButtonText(),
                 equalTo("Оформить заказ")
@@ -117,7 +109,7 @@ public class LoginPageTests {
     @Test
     @DisplayName("Вход через клик по кнопке 'Личный Кабинет' в хеддере страницы")
     public void authFromProfileButtonIsSuccess() {
-        Allure.parameter("Браузер", browserName);
+        Allure.parameter("Браузер", System.getProperty("browser", "chrome"));
 
         // Переход к форме авторизации через кнопку "Личный Кабинет"
         mainPage.clickLinkToProfile();
@@ -125,7 +117,7 @@ public class LoginPageTests {
         authUser();
 
         // Проверка текста на кнопке
-        assertThat(
+        MatcherAssert.assertThat(
                 "Текст на кнопке 'Войти в аккаунт' должен поменяться на 'Оформить заказ'",
                 mainPage.getAuthButtonText(),
                 equalTo("Оформить заказ")
@@ -135,7 +127,7 @@ public class LoginPageTests {
     @Test
     @DisplayName("Вход через форму восстановления пароля")
     public void authLinkFromForgotPasswordFormIsSuccess() {
-        Allure.parameter("Браузер", browserName);
+        Allure.parameter("Браузер", System.getProperty("browser", "chrome"));
 
         // Переход на страницу восстановления пароля
         webDriver.get(ServerURLs.FORGOT_PASSWORD_URL);
@@ -146,15 +138,13 @@ public class LoginPageTests {
         authUser();
 
         // Проверка текста на кнопке
-        assertThat(
+        MatcherAssert.assertThat(
                 "Текст на кнопке 'Войти в аккаунт' должен поменяться на 'Оформить заказ'",
                 mainPage.getAuthButtonText(),
                 equalTo("Оформить заказ")
         );
     }
 }
-
-
 
 
 

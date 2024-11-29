@@ -8,8 +8,7 @@ import org.hamcrest.MatcherAssert;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
+
 import org.openqa.selenium.WebDriver;
 import praktikum.ServerURLs;
 
@@ -23,7 +22,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 
 
-@RunWith(Parameterized.class)
+
 @DisplayName("Проверка личного кабинета пользователя")
 public class ProfilePageTests {
     private WebDriver webDriver;
@@ -35,20 +34,12 @@ public class ProfilePageTests {
     private String password;
     Faker faker = new Faker();
 
-    private String browserName;
 
-    public ProfilePageTests(String browserName) {
-        this.browserName = browserName;
-    }
-
-    @Parameterized.Parameters(name = "Тестирование на {0}")
-    public static Object[] browsers() {
-        return new Object[]{"chrome", "yandex"}; // Добавляем поддержку Яндекс браузера
-    }
 
     @Before
     @Step("Запуск браузера, подготовка тестовых данных")
     public void startUp() {
+        String browserName = System.getProperty("browser", "chrome");
         webDriver = WebDriverProvider.getDriver(browserName);
         webDriver.get(ServerURLs.MAIN_PAGE_URL);
 
@@ -104,7 +95,7 @@ public class ProfilePageTests {
     @Test
     @DisplayName("Проверка перехода по клику на 'Личный кабинет'")
     public void checkLinkToProfileIsSuccess() {
-        Allure.parameter("Браузер", browserName);
+        Allure.parameter("Браузер", System.getProperty("browser", "chrome"));
         goToProfile(); // Переход в личный кабинет
         MatcherAssert.assertThat(
                 "Некорректный URL страницы Личного кабинета",
@@ -116,7 +107,7 @@ public class ProfilePageTests {
     @Test
     @DisplayName("Проверка перехода из личного кабинета по клику на 'Конструктор'")
     public void checkLinkToConstructorIsSuccess() {
-        Allure.parameter("Браузер", browserName);
+        Allure.parameter("Браузер", System.getProperty("browser", "chrome"));
 
         goToProfile();
 
@@ -133,7 +124,7 @@ public class ProfilePageTests {
     @Test
     @DisplayName("Проверка перехода из личного кабинета по клику на логотип Stellar Burgers")
     public void checkLinkOnLogoIsSuccess() {
-        Allure.parameter("Браузер", browserName);
+        Allure.parameter("Браузер", System.getProperty("browser", "chrome"));
 
         goToProfile();
 
@@ -150,7 +141,7 @@ public class ProfilePageTests {
     @Test
     @DisplayName("Проверка выхода из личного кабинета по клику на кнопку 'Выйти'")
     public void checkLinkLogOutIsSuccess() {
-        Allure.parameter("Браузер", browserName);
+        Allure.parameter("Браузер", System.getProperty("browser", "chrome"));
 
         goToProfile();
 
@@ -164,7 +155,6 @@ public class ProfilePageTests {
         );
     }
 }
-
 
 
 
